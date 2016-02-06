@@ -1,0 +1,23 @@
+<template name="animalDetail">
+  <div class="animals row">
+    <div class="offset4 span8">
+
+      {{#if Template.subscriptionsReady}}
+        <!-- This is displayed when all data is ready. -->
+	  {{#each animalDetail}}
+       <form class="new-task">
+        <input type="hidden" value="{{_id}}"/>
+        Name: <input type="text" name="text" value="{{name}}" />
+        Gender: <input type="text" name="text" value="{{gender}}" />
+      </form>
+
+	  {{/each}}
+
+      {{else}}
+        Loading...
+      {{/if}}
+
+    </div>
+  </div>
+</template>
+
