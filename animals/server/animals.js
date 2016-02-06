@@ -35,3 +35,10 @@ Meteor.publish("animalDetail", function (animalId) {
   this.stop()
   return
 });
+
+Meteor.methods({
+  updateAnimal(modifier, documentId) {
+    console.log('update:',modifier,documentId);
+    Meteor.animals.update(documentId, modifier);
+  }
+})

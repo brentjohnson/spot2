@@ -5,11 +5,7 @@
       {{#if Template.subscriptionsReady}}
         <!-- This is displayed when all data is ready. -->
 	  {{#each animalDetail}}
-       <form class="new-task">
-        <input type="hidden" value="{{_id}}"/>
-        Name: <input type="text" name="text" value="{{name}}" />
-        Gender: <input type="text" name="text" value="{{gender}}" />
-      </form>
+		{{> quickForm collection="Meteor.animals" doc=this id="updateBookForm" type="method-update" meteormethod="updateAnimal"}}
 
 	  {{/each}}
 

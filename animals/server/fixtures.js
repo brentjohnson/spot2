@@ -17,9 +17,9 @@ function createAnimals () {
 
   if (Meteor.animals.find().fetch().length === 0) {
     // Should call the Animals.createAnimal() method.
-    Meteor.animals.insert({name: "Benny", gender: "Male"});
-    Meteor.animals.insert({name: "Norah", gender: "Female"});
-    Meteor.animals.insert({name: "Peanut", gender: "Male"});
+    Meteor.animals.insert({name: "Benny", gender: "male"});
+    Meteor.animals.insert({name: "Norah", gender: "female"});
+    Meteor.animals.insert({name: "Peanut", gender: "male"});
   }
 
 /*
