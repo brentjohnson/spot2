@@ -21,3 +21,5 @@ kadira:blaze-layout		# with Blaze layout
 
 aldeed:autoform			# forms
 aldeed:collection2		# attach schemas to forms and collections
+
+mizzao:bootstrap-3		# bootstrap
