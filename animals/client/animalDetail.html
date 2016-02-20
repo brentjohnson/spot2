@@ -1,13 +1,12 @@
 <template name="animalDetail">
-  <div class="animals row">
-    <div class="offset4 span8">
+  <div class="box box-primary">
+    <div class="box-body">
 
       {{#if Template.subscriptionsReady}}
         <!-- This is displayed when all data is ready. -->
-	  {{#each animalDetail}}
-		{{> quickForm collection="Meteor.animals" doc=this id="updateBookForm" type="method-update" meteormethod="updateAnimal"}}
-
-	  {{/each}}
+        {{#with animal}}
+		      {{> quickForm collection="Meteor.animals" doc=this id="updateAnimalForm" type="method-update" meteormethod="updateAnimal" buttonContent="Save"}}
+        {{/with}}
 
       {{else}}
         Loading...

@@ -8,7 +8,7 @@
           <a href="#"><i class="fa fa-link"></i> <span>All</span> <span class="label">{{ animals.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
           {{#each animal in animals }}
-            <li><a href="#">{{animal.name}}</a></li>
+            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
           {{/each}}
           </ul>
         </li>
@@ -17,7 +17,7 @@
           <a href="#"><i class="fa fa-link"></i> <span>Female</span> <span class="label">{{ females.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
           {{#each animal in females }}
-            <li><a href="#">{{animal.name}}</a></li>
+            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
           {{/each}}
           </ul>
         </li>
@@ -26,7 +26,7 @@
           <a href="#"><i class="fa fa-link"></i> <span>Male</span> <span class="label">{{ males.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
           {{#each animal in males }}
-            <li><a href="#">{{animal.name}}</a></li>
+            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
           {{/each}}
           </ul>
         </li>
@@ -35,7 +35,7 @@
           <a href="#"><i class="fa fa-link"></i> <span>In Boarding</span> <span class="label">{{ inBoardings.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
           {{#each animal in inBoardings }}
-            <li><a href="#">{{animal.name}}</a></li>
+            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
           {{/each}}
           </ul>
         </li>
@@ -44,7 +44,7 @@
           <a href="#"><i class="fa fa-link"></i> <span>In Foster</span> <span class="label">{{ inFosters.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
           {{#each animal in inFosters }}
-            <li><a href="#">{{animal.name}}</a></li>
+            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
           {{/each}}
           </ul>
         </li>

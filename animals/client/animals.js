@@ -8,14 +8,15 @@ Template.animalList.helpers({
   }
 })
 
-Template.animalDetail.onCreated(function () {
-  this.subscribe("animalDetail", this.data.animalId);
-})
+// Template.animalDetail.onCreated(function () {
+//   this.subscribe("animalDetail", this.data.animalId);
+// })
 
 Template.animalDetail.helpers({
-  animalDetail: function () {
-    return Meteor.animals.find();
-  }
+	animal: function () {
+		console.log(this.data);
+		return Meteor.animals.findOne({_id: FlowRouter.getParam('animalId')});
+	}
 })
 
 

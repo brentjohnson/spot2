@@ -14,7 +14,6 @@ FlowRouter.route('/animals', {
 
 FlowRouter.route('/animals/:animalId', {
   action: function (params) {
-    BlazeLayout.render('mainLayout', {content: 'animalDetail',
-                                  	  data: {animalId: params.animalId}})
+    BlazeLayout.render('mainLayout', {content: 'animalDetail'});
   }
 })
