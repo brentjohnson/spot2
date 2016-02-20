@@ -1,18 +1,22 @@
 <template name="animalDetail">
-  <div class="box box-primary">
-    <div class="box-body">
+  <div class="col-sm-10">
+    <div class="box box-primary">
+      <div class="box-body">
 
-      {{#if Template.subscriptionsReady}}
-        <!-- This is displayed when all data is ready. -->
-        {{#with animal}}
-		      {{> quickForm collection="Meteor.animals" doc=this id="updateAnimalForm" type="method-update" meteormethod="updateAnimal" buttonContent="Save"}}
-        {{/with}}
+        {{#if Template.subscriptionsReady}}
+          <!-- This is displayed when all data is ready. -->
+          {{#with animal}}
+  		      {{> quickForm collection="Meteor.animals" doc=this id="updateAnimalForm" type="method-update" meteormethod="updateAnimal" buttonContent="Save" template="bootstrap-horizontal" label-class="col-sm-4" input-col-class="col-sm-6"}}
+          {{/with}}
 
-      {{else}}
-        Loading...
-      {{/if}}
+        {{else}}
+          Loading...
+        {{/if}}
 
+      </div>
     </div>
   </div>
+
+
 </template>
 
