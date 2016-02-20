@@ -3,37 +3,52 @@
       <ul class="sidebar-menu">
 
         <li class="header">ANIMALS</li>
+
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>In Boarding</span> <span class="label">4</span><i class="fa fa-angle-left pull-right"></i></a>
+          <a href="#"><i class="fa fa-link"></i> <span>All</span> <span class="label">{{ allAnimals.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="#">Fluffy</a></li>
-            <li><a href="#">Rover</a></li>
-            <li><a href="#">Spot</a></li>
-            <li><a href="#">Zeke</a></li>
+          {{#each animal in allAnimals }}
+            <li><a href="#">{{animal.name}}</a></li>
+          {{/each}}
           </ul>
         </li>
 
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>In Foster</span> <span class="label">12</span><i class="fa fa-angle-left pull-right"></i></a>
+          <a href="#"><i class="fa fa-link"></i> <span>Female</span> <span class="label">{{ females.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="#">Angelina</a></li>
-            <li><a href="#">Bob</a></li>
-            <li><a href="#">Carl</a></li>
-            <li><a href="#">Drake</a></li>
-            <li><a href="#">Ella</a></li>
-            <li><a href="#">Floyd</a></li>
-            <li><a href="#">Granger</a></li>
-            <li><a href="#">Hank</a></li>
-            <li><a href="#">Igor</a></li>
-            <li><a href="#">Jones</a></li>
-            <li><a href="#">Kipper</a></li>
-            <li><a href="#">Luke Skywalker</a></li>
-            <li><a href="#">Marty</a></li>
-            <li><a href="#">Nancy Drew</a></li>
-            <li><a href="#">Oliver</a></li>
-            <li><a href="#">Pete</a></li>
+          {{#each animal in females }}
+            <li><a href="#">{{animal.name}}</a></li>
+          {{/each}}
           </ul>
         </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Male</span> <span class="label">{{ males.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+          {{#each animal in males }}
+            <li><a href="#">{{animal.name}}</a></li>
+          {{/each}}
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>In Boarding</span> <span class="label">{{ inBoardings.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+          {{#each animal in inBoardings }}
+            <li><a href="#">{{animal.name}}</a></li>
+          {{/each}}
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>In Foster</span> <span class="label">{{ inFosters.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+          {{#each animal in inFosters }}
+            <li><a href="#">{{animal.name}}</a></li>
+          {{/each}}
+          </ul>
+        </li>
+
 
         <li class="header">PEOPLE</li>
         <!-- Optionally, you can add icons to the links -->
