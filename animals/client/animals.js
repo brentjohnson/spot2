@@ -21,23 +21,23 @@ Template.animalDetail.helpers({
 
 Template.sidebarMenu.helpers({
 	allAnimals: function() {
-		return Meteor.animals.find();
+		return Meteor.animals.find({}, {sort: {name: 1}});
 	},
 
 	males: function() {
-		return Meteor.animals.find({gender: "male"});
+		return Meteor.animals.find({gender: "male"}, {sort: {name: 1}});
 	},
 
 	females: function() {
-		return Meteor.animals.find({gender: "female"});
+		return Meteor.animals.find({gender: "female"}, {sort: {name: 1}});
 	},
 	
 	inBoardings: function() {
-		return Meteor.animals.find({inBoarding: "true"});
+		return Meteor.animals.find({location: "boarding"}, {sort: {name: 1}});
 	},
 	
 	inFosters: function() {
-		return Meteor.animals.find({inFoster: "true"});
+		return Meteor.animals.find({location: "foster"}, {sort: {name: 1}});
 	}
 	
 })

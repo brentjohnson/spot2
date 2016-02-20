@@ -14,6 +14,11 @@ Meteor.animals.attachSchema(new SimpleSchema({
 		type: String,
 		label: "Gender",
 		allowedValues: ["male", "female"]
+	},
+	location: {
+		type: String,
+		label: "Location",
+		allowedValues: ["boarding", "foster", "shelter", "adopted"]
 	}
 
 }));
