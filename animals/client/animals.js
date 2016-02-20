@@ -20,7 +20,7 @@ Template.animalDetail.helpers({
 
 
 Template.sidebarMenu.helpers({
-	allAnimals: function() {
+	animals: function() {
 		return Meteor.animals.find({}, {sort: {name: 1}});
 	},
 

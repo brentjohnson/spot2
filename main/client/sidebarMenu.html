@@ -5,9 +5,9 @@
         <li class="header">ANIMALS</li>
 
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>All</span> <span class="label">{{ allAnimals.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
+          <a href="#"><i class="fa fa-link"></i> <span>All</span> <span class="label">{{ animals.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-          {{#each animal in allAnimals }}
+          {{#each animal in animals }}
             <li><a href="#">{{animal.name}}</a></li>
           {{/each}}
           </ul>
