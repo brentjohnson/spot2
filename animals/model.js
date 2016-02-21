@@ -52,8 +52,8 @@ Meteor.animals.attachSchema(new SimpleSchema({
 	coordinator: {
 		type: String,
 		label: "Coordinator",
-		allowedValues: ["Carol", "Carrie", "Kara", "Leslie", "Niki"],
-		optional: true
+		allowedValues: ["Carol", "Carrie", "Kara", "Leslie", "Niki", "Unassigned"],
+		defaultValue: "Unassigned"
 	},
 	foster: {
 		type: String,

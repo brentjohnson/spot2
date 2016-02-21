@@ -4,59 +4,29 @@
 
         <li class="header">ANIMALS</li>
 
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>All</span> <span class="label">{{ animals.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-          {{#each animal in animals }}
-            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
-          {{/each}}
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Female</span> <span class="label">{{ females.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-          {{#each animal in females }}
-            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
-          {{/each}}
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Male</span> <span class="label">{{ males.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-          {{#each animal in males }}
-            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
-          {{/each}}
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>In Boarding</span> <span class="label">{{ inBoardings.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-          {{#each animal in inBoardings }}
-            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
-          {{/each}}
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>In Foster</span> <span class="label">{{ inFosters.count }}</span><i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-          {{#each animal in inFosters }}
-            <li><a href="/animals/{{animal._id}}">{{animal.name}}</a></li>
-          {{/each}}
-          </ul>
-        </li>
-
+        <li><a href="/animals"><i class="fa fa-link"></i> <span>All</span><span class="label">{{ animals.count }}</span></a></li>
+        <li><a href="/animals?inBoarding"><i class="fa fa-link"></i> <span>In Boarding</span><span class="label">{{ inBoarding.count }}</span></a></li>
 
         <li class="header">PEOPLE</li>
         <!-- Optionally, you can add icons to the links -->
+<!--
         <li><a href="#"><i class="fa fa-link"></i> <span>Applicants</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Coordinators</span></a></li>
+-->
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Coordinators</span><i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="/animals/?coordinator=Carol">Carol<span class="label">{{ coordinatedCount 'Carol'}}</span></a></li>
+            <li><a href="/animals/?coordinator=Carrie">Carrie<span class="label">{{ coordinatedCount 'Carrie'}}</span></a></li>
+            <li><a href="/animals/?coordinator=Kara">Kara<span class="label">{{ coordinatedCount 'Kara'}}</span></a></li>
+            <li><a href="/animals/?coordinator=Leslie">Leslie<span class="label">{{ coordinatedCount 'Leslie'}}</span></a></li>
+            <li><a href="/animals/?coordinator=Niki">Niki<span class="label">{{ coordinatedCount 'Niki'}}</span></a></li>
+            <li><a href="/animals/?coordinator=Unassigned">Unassigned<span class="label">{{ coordinatedCount 'Unassigned'}}</span></a></li>
+          </ul>
+        </li>
+<!--
         <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Fosters</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Volunteers</span></a></li>
-
+-->  
       </ul>
 
 </template>
