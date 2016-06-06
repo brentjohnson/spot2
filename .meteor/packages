@@ -24,3 +24,6 @@ aldeed:collection2		# attach schemas to forms and collections
 mizzao:bootstrap-3		# bootstrap
 standard-minifier-css
 standard-minifier-js
+accounts-ui
+accounts-facebook
+accounts-google

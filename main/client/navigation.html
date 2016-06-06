@@ -107,9 +107,9 @@
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="https://graph.facebook.com/v2.2/746944883/picture?type=large" class="user-image" alt="User Image">
+              <img src="{{ Meteor.user.profile.picture }}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Brent Johnson</span>
+              <span class="hidden-xs">{{ Meteor.user.profile.name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -144,6 +144,9 @@
                 <div class="pull-right">
                   <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
+              </li>
+                {{> loginButtons}}
+              <li>
               </li>
             </ul>
           </li>
